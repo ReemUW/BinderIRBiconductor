@@ -33,5 +33,4 @@ RUN conda config --add channels r && \
     'r-nycflights13=0.2*' \
     'r-caret=6.0*' \
     'r-rcurl=1.95*' \
-    'r-crayon=1.3*' \
-    'bioconductor-limma' && conda clean -tipsy
+    'r-crayon=1.3*' && conda clean -tipsy
