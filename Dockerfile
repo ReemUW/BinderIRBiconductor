@@ -18,8 +18,10 @@ RUN apt-get update && \
 USER $NB_USER
 
 # R packages
-RUN conda config --add channels r && \
-    conda install --quiet --yes \
+RUN conda config --add channels r
+RUN conda config --add channels bioconda
+
+RUN conda install --quiet --yes \
     'r-base=3.3.2' \
     'r-irkernel=0.7*' \
     'r-plyr=1.8*' \
@@ -33,4 +35,5 @@ RUN conda config --add channels r && \
     'r-nycflights13=0.2*' \
     'r-caret=6.0*' \
     'r-rcurl=1.95*' \
-    'r-crayon=1.3*' && conda clean -tipsy
+    'r-crayon=1.3*' \
+    'bioconductor-limma' && conda clean -tipsy
