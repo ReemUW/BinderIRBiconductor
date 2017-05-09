@@ -1,4 +1,4 @@
-FROM andrewosh/binder-base
+FROM jupyter/r-notebook:599db13f9123
 
 MAINTAINER Reem Almugbel <reem2@uw.edu>
 
