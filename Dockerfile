@@ -1,4 +1,4 @@
-FROM andrewosh/binder-base
+FROM jupyter/r-notebook:599db13f9123
 
 MAINTAINER Reem Almugbel <reem2@uw.edu>
 
@@ -37,3 +37,6 @@ RUN conda install --quiet --yes \
     'r-rcurl=1.95*' \
     'r-crayon=1.3*' \
     'bioconductor-limma' && conda clean -tipsy
+
+WORKDIR /home/jovyan
+ADD . /home/jovyan
