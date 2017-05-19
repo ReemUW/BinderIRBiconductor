@@ -35,4 +35,3 @@ RUN conda install --quiet --yes \
     'r-crayon=1.3*' && conda clean -tipsy
 
 WORKDIR /home/jovyan
-ADD . /home/jovyan
